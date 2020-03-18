@@ -15,6 +15,16 @@
         [
           {
             "expectation": "blocked",
+            "origin": "cross-http",
+            "redirection": "keep-scheme",
+            "source_context_list": [],
+            "source_scheme": "https",
+            "subresource": "picture-tag",
+            "subresource_policy_deliveries": [],
+            "test_description": "Mixed-Content: Expects blocked for picture-tag to cross-http origin and keep-scheme redirection from https context."
+          },
+          {
+            "expectation": "blocked",
             "origin": "cross-https",
             "redirection": "swap-scheme",
             "source_context_list": [],
@@ -22,6 +32,16 @@
             "subresource": "picture-tag",
             "subresource_policy_deliveries": [],
             "test_description": "Mixed-Content: Expects blocked for picture-tag to cross-https origin and swap-scheme redirection from https context."
+          },
+          {
+            "expectation": "blocked",
+            "origin": "same-https",
+            "redirection": "swap-scheme",
+            "source_context_list": [],
+            "source_scheme": "https",
+            "subresource": "picture-tag",
+            "subresource_policy_deliveries": [],
+            "test_description": "Mixed-Content: Expects blocked for picture-tag to same-https origin and swap-scheme redirection from https context."
           },
           {
             "expectation": "blocked",
@@ -46,26 +66,6 @@
           {
             "expectation": "blocked",
             "origin": "cross-http",
-            "redirection": "keep-scheme",
-            "source_context_list": [],
-            "source_scheme": "https",
-            "subresource": "picture-tag",
-            "subresource_policy_deliveries": [],
-            "test_description": "Mixed-Content: Expects blocked for picture-tag to cross-http origin and keep-scheme redirection from https context."
-          },
-          {
-            "expectation": "blocked",
-            "origin": "same-http",
-            "redirection": "swap-scheme",
-            "source_context_list": [],
-            "source_scheme": "https",
-            "subresource": "picture-tag",
-            "subresource_policy_deliveries": [],
-            "test_description": "Mixed-Content: Expects blocked for picture-tag to same-http origin and swap-scheme redirection from https context."
-          },
-          {
-            "expectation": "blocked",
-            "origin": "cross-http",
             "redirection": "swap-scheme",
             "source_context_list": [],
             "source_scheme": "https",
@@ -85,13 +85,13 @@
           },
           {
             "expectation": "blocked",
-            "origin": "same-https",
+            "origin": "same-http",
             "redirection": "swap-scheme",
             "source_context_list": [],
             "source_scheme": "https",
             "subresource": "picture-tag",
             "subresource_policy_deliveries": [],
-            "test_description": "Mixed-Content: Expects blocked for picture-tag to same-https origin and swap-scheme redirection from https context."
+            "test_description": "Mixed-Content: Expects blocked for picture-tag to same-http origin and swap-scheme redirection from https context."
           },
           {
             "expectation": "allowed",

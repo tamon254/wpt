@@ -16,27 +16,6 @@
           {
             "expectation": "blocked",
             "origin": "same-http",
-            "redirection": "keep-scheme",
-            "source_context_list": [
-              {
-                "policyDeliveries": [
-                  {
-                    "deliveryType": "http-rp",
-                    "key": "mixedContent",
-                    "value": "opt-in"
-                  }
-                ],
-                "sourceContextType": "worker-classic"
-              }
-            ],
-            "source_scheme": "https",
-            "subresource": "worker-module",
-            "subresource_policy_deliveries": [],
-            "test_description": "Mixed-Content: Expects blocked for worker-module to same-http origin and keep-scheme redirection from https context."
-          },
-          {
-            "expectation": "blocked",
-            "origin": "same-http",
             "redirection": "no-redirect",
             "source_context_list": [
               {
@@ -54,6 +33,27 @@
             "subresource": "worker-module",
             "subresource_policy_deliveries": [],
             "test_description": "Mixed-Content: Expects blocked for worker-module to same-http origin and no-redirect redirection from https context."
+          },
+          {
+            "expectation": "blocked",
+            "origin": "same-http",
+            "redirection": "keep-scheme",
+            "source_context_list": [
+              {
+                "policyDeliveries": [
+                  {
+                    "deliveryType": "http-rp",
+                    "key": "mixedContent",
+                    "value": "opt-in"
+                  }
+                ],
+                "sourceContextType": "worker-classic"
+              }
+            ],
+            "source_scheme": "https",
+            "subresource": "worker-module",
+            "subresource_policy_deliveries": [],
+            "test_description": "Mixed-Content: Expects blocked for worker-module to same-http origin and keep-scheme redirection from https context."
           },
           {
             "expectation": "allowed",

@@ -15,27 +15,6 @@
         [
           {
             "expectation": "blocked",
-            "origin": "same-ws",
-            "redirection": "no-redirect",
-            "source_context_list": [
-              {
-                "policyDeliveries": [
-                  {
-                    "deliveryType": "http-rp",
-                    "key": "mixedContent",
-                    "value": "opt-in"
-                  }
-                ],
-                "sourceContextType": "worker-module"
-              }
-            ],
-            "source_scheme": "https",
-            "subresource": "websocket",
-            "subresource_policy_deliveries": [],
-            "test_description": "Mixed-Content: Expects blocked for websocket to same-ws origin and no-redirect redirection from https context."
-          },
-          {
-            "expectation": "blocked",
             "origin": "cross-ws",
             "redirection": "no-redirect",
             "source_context_list": [
@@ -54,6 +33,27 @@
             "subresource": "websocket",
             "subresource_policy_deliveries": [],
             "test_description": "Mixed-Content: Expects blocked for websocket to cross-ws origin and no-redirect redirection from https context."
+          },
+          {
+            "expectation": "blocked",
+            "origin": "same-ws",
+            "redirection": "no-redirect",
+            "source_context_list": [
+              {
+                "policyDeliveries": [
+                  {
+                    "deliveryType": "http-rp",
+                    "key": "mixedContent",
+                    "value": "opt-in"
+                  }
+                ],
+                "sourceContextType": "worker-module"
+              }
+            ],
+            "source_scheme": "https",
+            "subresource": "websocket",
+            "subresource_policy_deliveries": [],
+            "test_description": "Mixed-Content: Expects blocked for websocket to same-ws origin and no-redirect redirection from https context."
           },
           {
             "expectation": "allowed",
